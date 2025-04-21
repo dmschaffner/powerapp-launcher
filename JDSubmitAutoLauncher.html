@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Launching Power App...</title>
+  <script>
+    window.onload = function() {
+      const url = "https://apps.powerapps.com/play/e/default-f25356d0-185d-43c6-8296-20a416f1cd8f/a/e4ebad53-9a6e-45bc-9e4d-2ab16a421b54?tenantId=f25356d0-185d-43c6-8296-20a416f1cd8f";
+      const width = 500;
+      const height = 600;
+      const left = (screen.width / 2) - (width / 2);
+      const top = (screen.height / 2) - (height / 2);
+
+      const popup = window.open(
+        url,
+        "PowerAppPopup",
+        `width=${width},height=${height},top=${top},left=${left},resizable=no,scrollbars=no`
+      );
+
+      // Give the popup a second to launch, then close this window
+      setTimeout(() => window.close(), 1000);
+    };
+  </script>
+</head>
+<body>
+  <p>Launching app...</p>
+</body>
+</html>
